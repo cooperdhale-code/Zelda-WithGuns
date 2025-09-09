@@ -19,12 +19,9 @@ public class healthplayer : MonoBehaviour
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
     }
-    private void Update()
+    public void Heal(float amount)
     {
-        //if the player presses the "k" key
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(20f);
-        }
+        currentHealth += amount;
+        healthBar.SetSlider(currentHealth);
     }
 }
